@@ -101,7 +101,7 @@ def shop_keyboard():
 
     # Mahsulotlar ro'yxati: (id, nomi, narxi)
     shop_items = [
-        ("fifty_fifty", "🎯 50/50 Joker (2 noto'g'ri o'chadi)", 50),
+        ("fifty_fifty", "🎯 50/50 Joker (2 noto'g'ri o'chadi)", 15),
         ("stiker_pack", "🎨 Maxsus Stiker To'plami", 500),
         ("premium_badge", "⭐ Premium Nishon", 1000),
         ("extra_quiz", "📝 Qo'shimcha Quiz Urinish", 200),

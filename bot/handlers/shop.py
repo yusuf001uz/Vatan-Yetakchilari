@@ -292,7 +292,7 @@ async def cmd_help(message: Message):
     await message.answer(
         "ℹ️ <b>Bot Haqida</b>\n"
         "━━━━━━━━━━━━━━━\n\n"
-        "🇺🇿 <b>O'zbekiston Ta'lim Boti</b> — maktab o'quvchilari uchun\n\n"
+        "🇺🇿 <b>Vatanimni Bilaman Boti</b> — maktab o'quvchilari uchun\n\n"
         "📚 <b>O'rganish</b> — har bir viloyat yodgorliklarini rasm va ma'lumot bilan o'rganing\n\n"
         "📝 <b>Quiz</b> — har bir joy uchun 10 savol; to'g'ri javob uchun coin topasiz\n\n"
         "🎯 <b>50/50 Joker</b> — do'kondan 50 🪙 ga sotib oling.\n"

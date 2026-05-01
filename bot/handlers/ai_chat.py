@@ -106,7 +106,7 @@ async def ai_reply(message: Message, state: FSMContext):
     history.append({"role": "user", "content": text})
 
     system = (
-        "Siz O'zbekiston Ta'lim botining AI yordamchisisiz. "
+        "Siz Vatanimni Bilaman botining AI yordamchisisiz. "
         "Foydalanuvchi — o'zbek maktab o'quvchisi. "
         "O'zbek tilida, qisqa (3-5 jumla), tushunarli va qiziqarli javob bering. "
         "Emoji ishlating. Agar bilmasangiz, halol aytib bering."

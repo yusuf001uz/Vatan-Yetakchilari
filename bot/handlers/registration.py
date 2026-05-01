@@ -57,7 +57,7 @@ async def cmd_start(message: Message, state: FSMContext):
         return
 
     await message.answer(
-        "🇺🇿 <b>O'zbekiston Ta'lim Botiga Xush Kelibsiz!</b>\n\n"
+        "🇺🇿 <b>Vatanimni Bilaman Botiga Xush Kelibsiz!</b>\n\n"
         "📚 Yodgorliklarni o'rganing\n"
         "📝 Quiz ishlang va coin yig'ing\n"
         "🤖 AI bilan suhbat quring\n"
