@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>O'zbekiston Ta'lim — Kirish</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container hflex">
+    <div class="logo">🇺🇿 O'zbekiston Ta'lim</div>
+    <a href="https://t.me/{{ BOT_USERNAME }}" class="btn btn-outline" target="_blank">Botga o'tish →</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-left">
+        <h1>Bilim yig'ing,<br><span class="accent">Obuna oling!</span></h1>
+        <p class="hero-sub">Botda quiz ishlang, coin yig'ing. Saytda obuna sotib oling.</p>
+        <div class="steps-mini">
+          <div class="sm">🤖 Botda /start yuboring</div>
+          <div class="sm-arrow">↓</div>
+          <div class="sm">📝 Quiz ishlang, coin yig'ing</div>
+          <div class="sm-arrow">↓</div>
+          <div class="sm">🌐 Saytga kiring, obuna oling</div>
+        </div>
+      </div>
+
+      <div class="login-box" id="login">
+        <h2 class="lb-title">🔑 Kirish</h2>
+
+        {% if error == 'notfound' %}
+        <div class="form-error">❌ Bunday foydalanuvchi topilmadi. Botda ro'yxatdan o'ting.</div>
+        {% elif error == 'wrongpass' %}
+        <div class="form-error">❌ Parol noto'g'ri. Qayta urinib ko'ring.</div>
+        {% endif %}
+
+        <form method="POST" action="/login" class="login-form">
+          <div class="field">
+            <label>Foydalanuvchi nomi</label>
+            <input type="text" name="username" placeholder="masalan: ali_2025"
+                   autocomplete="username" required>
+          </div>
+          <div class="field">
+            <label>Parol</label>
+            <input type="password" name="password" placeholder="••••••••"
+                   autocomplete="current-password" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Kirish →</button>
+        </form>
+
+        <div class="lb-divider">yoki</div>
+
+        <a href="/register" class="btn btn-outline btn-full">
+          🤖 Hisob yo'qmi? Botda ro'yxatdan o'ting
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- OBUNA REJALARI -->
+  <section class="plans-section">
+    <div class="container">
+      <h2 class="sec-title">Obuna Rejalari</h2>
+      <div class="plans-grid">
+
+        <div class="plan-card plan-pro">
+          <div class="plan-glow plan-glow-pro"></div>
+          <div class="plan-head"><span class="plan-emoji">💙</span><span class="plan-name">Pro</span></div>
+          <div class="plan-price"><span class="pnum">1,000</span><span class="punit">🪙 / oy</span></div>
+          <ul class="plan-feats">
+            <li>🎯 Kuniga <b>20 ta</b> joker</li>
+            <li>🔁 <b>2 marta</b> qayta ishlash</li>
+            <li>🪙 <b>+250 coin</b>/kun bonus</li>
+          </ul>
+          <a href="#login" class="plan-btn btn-pro">Sotib olish</a>
+        </div>
+
+        <div class="plan-card plan-plus plan-popular">
+          <div class="plan-glow plan-glow-plus"></div>
+          <div class="popular-badge">Mashhur</div>
+          <div class="plan-head"><span class="plan-emoji">💜</span><span class="plan-name">Plus</span></div>
+          <div class="plan-price"><span class="pnum">1,500</span><span class="punit">🪙 / oy</span></div>
+          <ul class="plan-feats">
+            <li>🎯 Kuniga <b>50 ta</b> joker</li>
+            <li>🔁 <b>5 marta</b> qayta ishlash</li>
+            <li>🪙 <b>+250 coin</b>/kun bonus</li>
+          </ul>
+          <a href="#login" class="plan-btn btn-plus">Sotib olish</a>
+        </div>
+
+        <div class="plan-card plan-ultra">
+          <div class="plan-glow plan-glow-ultra"></div>
+          <div class="ultra-badge">👑 Eng kuchli</div>
+          <div class="plan-head"><span class="plan-emoji">👑</span><span class="plan-name">Ultra Plus</span></div>
+          <div class="plan-price"><span class="pnum">20,000</span><span class="punit">🪙 / oy</span></div>
+          <ul class="plan-feats">
+            <li>🎯 <b>Cheksiz</b> joker</li>
+            <li>🔁 <b>Cheksiz</b> qayta ishlash</li>
+            <li>🪙 <b>+550 coin</b>/kun bonus</li>
+            <li>👑 Oltin nishon + Admin aloqa</li>
+          </ul>
+          <a href="#login" class="plan-btn btn-ultra">Sotib olish</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p>🇺🇿 O'zbekiston Ta'lim Boti &nbsp;|&nbsp;
+       <a href="https://t.me/{{ BOT_USERNAME }}" target="_blank">@{{ BOT_USERNAME }}</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

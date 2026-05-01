@@ -1,0 +1,14 @@
+# Python kesh fayllari
+__pycache__/
+*.py[cod]
+
+# Virtual muhit
+venv/
+.env
+
+# Ma'lumotlar bazasi
+*.db
+
+# API kalitlar bor fayllar (agar .env ishlatmasangiz)
+config.py
+shared_config.py
