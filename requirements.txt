@@ -1,5 +1,5 @@
 # Veb-server va asosiy freymvorklar
-fastapi
+fastapi>=0.115.2
 gradio
 uvicorn[standard]
 gunicorn
