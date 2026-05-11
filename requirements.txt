@@ -3,7 +3,7 @@ fastapi>=0.115.2
 gradio
 uvicorn[standard]
 gunicorn
-
+itsdangerous
 # Bot uchun (aiogram ishlatayotgan bo'lsangiz)
 aiogram==3.15.0
 
