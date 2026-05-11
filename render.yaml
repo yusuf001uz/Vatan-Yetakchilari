@@ -1,16 +1,3 @@
-# render.yaml — Render.com ga deploy qilish uchun
-# Render.com da "Blueprint" sifatida ishlatiladi
-
-services:
-  # === TELEGRAM BOT ===
-  - type: worker
-    name: uzbekistan-bot
-    runtime: python
-    buildCommand: pip install -r bot/requirements.txt
-    startCommand: python bot/bot.py
-    envVars:
-      - key: PYTHONUNBUFFERED
-        value: "1"
 
   # === WEB SAYT ===
   - type: web
