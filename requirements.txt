@@ -1,10 +1,8 @@
 # Veb-server va asosiy freymvorklar
-fastapi>=0.115.2
+fastapi
+gradio
 uvicorn[standard]
 gunicorn
-
-# Agar Gradio panel kerak bo'lsa
-gradio>=6.4.0
 
 # Bot uchun (aiogram ishlatayotgan bo'lsangiz)
 aiogram==3.15.0
