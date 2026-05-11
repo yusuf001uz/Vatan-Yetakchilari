@@ -1,29 +1,18 @@
-# --- Core Bot (aiogram 3.x) ---
+# Veb-server va asosiy freymvorklar
+fastapi>=0.115.2
+uvicorn[standard]
+gunicorn
+
+# Agar Gradio panel kerak bo'lsa
+gradio>=6.4.0
+
+# Bot uchun (aiogram ishlatayotgan bo'lsangiz)
 aiogram==3.15.0
-magic-filter==1.0.12
-pydantic==2.10.0
-pydantic-settings==2.13.1
 
-# --- Database & Migrations ---
-SQLAlchemy==2.0.46
-alembic==1.18.4
-psycopg2-binary==2.9.9
-redis==5.0.8
+# Ma'lumotlar bazasi
+sqlalchemy>=2.0.0
+psycopg2-binary
+python-dotenv
 
-# --- Web & Networking ---
-aiohttp==3.13.2
-requests==2.32.5
-uvicorn==0.30.1
-python-multipart==0.0.9
-
-# --- Environment & Utils ---
-python-dotenv==1.2.1
-python-decouple==3.8
-pytz==2025.2
-tqdm==4.67.1
-rich==14.3.1
-
-# --- Security ---
-PyJWT==2.12.1
-bcrypt==5.0.0
-itsdangerous==2.2.0
+# Ortiqcha narsalarni o'chiring! 
+# torch, transformers, scipy kabi kutubxonalarni bu ro'yxatdan olib tashlang.
