@@ -125,16 +125,15 @@ async def index(request: Request):
     if get_uid(request):
         return RedirectResponse(url="/dashboard")
     
-    # TemplateResponse chaqirganda context'ni aniq ko'rsatish shart
+    # Yangi versiyalarda 'request' birinchi argument sifatida berilishi shart
     return templates.TemplateResponse(
+        request=request,
         name="index.html",
         context={
-            "request": request,
             "plans": SUBSCRIPTION_PLANS,
             "error": request.query_params.get("error", "")
         }
     )
-
 
 @app.post("/login")
 async def login(
