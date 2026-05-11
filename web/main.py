@@ -121,13 +121,19 @@ def get_active_sub(user_id: int):
 
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
+    # Foydalanuvchi tizimga kirgan bo'lsa, dashboardga yo'naltirish
     if get_uid(request):
-        return RedirectResponse("/dashboard")
-    return templates.TemplateResponse("index.html", {
-        "request": request,
-        "plans": SUBSCRIPTION_PLANS,
-        "error": request.query_params.get("error", ""),
-    })
+        return RedirectResponse(url="/dashboard")
+    
+    # TemplateResponse chaqirganda context'ni aniq ko'rsatish shart
+    return templates.TemplateResponse(
+        name="index.html",
+        context={
+            "request": request,
+            "plans": SUBSCRIPTION_PLANS,
+            "error": request.query_params.get("error", "")
+        }
+    )
 
 
 @app.post("/login")
