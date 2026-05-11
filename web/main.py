@@ -9,16 +9,21 @@ from typing import Optional
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 # Loyiha ildiz papkasini Python yo'liga qo'shish
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-ROOT_DIR = os.path.dirname(BASE_DIR)
-if ROOT_DIR not in sys.path:
-    sys.path.insert(0, ROOT_DIR)
+import sys
+import os
+
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+PARENT_DIR = os.path.dirname(CURRENT_DIR)
+if PARENT_DIR not in sys.path:
+    sys.path.insert(0, PARENT_DIR)
+
 from fastapi import FastAPI, Request, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from starlette.middleware.sessions import SessionMiddleware
 
+# Endi bu import xato bermaydi
 from shared_config import WEB_SECRET_KEY, BOT_USERNAME, SITE_URL, DB_NAME, SUBSCRIPTION_PLANS
 
 app = FastAPI(title="O'zbekiston Ta'lim")
